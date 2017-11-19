@@ -1,0 +1,567 @@
+/*
+Theme Name: Hydron (H+)
+Theme URI: http://projects.richebois.fr/hydron
+Version: 1.0
+Release: March, 26th 2017
+Description: Richwood basic Stylecheet based on bootstrap
+Author: Richwood
+Author URI: http://richebois.fr?lang=en
+
+SCSS manual -> http://sass-lang.com/guide
+*/
+/*
+	Colors
+ */
+/*
+	font
+ */
+/*
+	MIXINS
+ */
+/******************
+* BASICS
+* Soft reset
+*******************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+code,
+pre,
+samp {
+  white-space: pre-wrap;
+  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace; }
+
+body {
+  line-height: 1;
+  font-family: "Droid Serif", "Lora", "Roboto Slab", "Merriweather", "Times New Roman", sans-serif;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Droid Serif", "Lora", "Roboto Slab", "Merriweather", "Times New Roman", sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+  color: #333333;
+  webkit-tap-highlight-color: #222; }
+
+code {
+  line-height: 1em; }
+
+table {
+  margin-bottom: 1.5em; }
+
+/* avoid top margins on first content element */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0; }
+
+/* avoid margins on nested elements */
+li p,
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* HTML5 tags */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+/* max values */
+img, table, td, blockquote, code, pre, textarea, input, video {
+  max-width: 100%; }
+
+/* you shall not pass */
+div, textarea, table, td, th, code, pre, samp {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto; }
+
+/* pictures */
+img {
+  width: auto;
+  height: auto;
+  vertical-align: middle; }
+
+a img {
+  border: 0; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+/* scripts */
+body > script {
+  display: none !important; }
+
+/* skip-links */
+.skip-links {
+  position: absolute; }
+
+.skip-links a {
+  position: absolute;
+  left: -9999px;
+  padding: 0.5em;
+  background: #000;
+  color: #fff;
+  text-decoration: none; }
+
+.skip-links a:focus {
+  position: static; }
+
+/* *****************
+* SPECIAL
+****************** */
+::-moz-selection {
+  color: #444;
+  background: #a8da43; }
+
+::selection {
+  color: #444;
+  background: #a8da43; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* TRACK */
+::-webkit-scrollbar-track {
+  background-color: #ededed;
+  border-radius: 10px; }
+
+/* HANDLE */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #cbcbcb;
+  border-left: 1px solid #f2f2f2; }
+
+/* *****************
+* HEADER
+****************** */
+header {
+  position: relative;
+  min-height: 230px; }
+  header svg {
+    fill: #FFF;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    min-height: 130px;
+    width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", "Quicksand", "Segoe UI", "Helvetica Neue", "Open Sans", "Noto Sans", "Droid Sans Serif", "Roboto", Arial, sans-serif;
+  color: #1a1a1a;
+  margin: 0.83em auto; }
+
+h1 {
+  font-family: "Ubuntu", "Quicksand", "Segoe UI", "Helvetica Neue", "Open Sans", "Noto Sans", "Droid Sans Serif", "Roboto", Arial, sans-serif;
+  color: #1a1a1a;
+  font-size: 60px;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.0593;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  padding: 12px 0 17px; }
+
+h2 {
+  font-family: "Ubuntu", "Quicksand", "Segoe UI", "Helvetica Neue", "Open Sans", "Noto Sans", "Droid Sans Serif", "Roboto", Arial, sans-serif;
+  color: #333333;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-size: 42px;
+  color: #252525;
+  font-weight: 700;
+  margin: 32px 0 50px; }
+
+h3 {
+  font-family: "Segoe UI", "Helvetica Neue", "Noto Sans", "Droid Sans Serif", "Sintony", "Roboto", Arial, sans-serif;
+  color: #757575;
+  text-align: left;
+  margin: 0.83em auto;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px; }
+
+h4 {
+  font-size: 25px; }
+
+.btn, .pending, .validate {
+  border: 1px solid transparent;
+  padding: 10px;
+  margin: 10px; }
+
+.pending {
+  border-color: #d2d2d2;
+  background-color: #d2d2d2; }
+
+.validate {
+  border-color: #a8da43;
+  background-color: #a8da43; }
+
+/* *****************
+* FOOTER
+****************** */
+#last {
+  padding-bottom: 80px; }
+
+/* *****************
+* PERSONAL CLASSES
+****************** */
+.wide-space {
+  letter-spacing: 1.6px; }
+
+.white-space {
+  padding-top: 30px; }
+
+.icon-lg {
+  font-size: 50px;
+  line-height: 18px; }
+
+.bg-primary {
+  background-color: #a8da43; }
+
+.bg-dark {
+  color: #d2d2d2;
+  background-color: #4b4b4b; }
+
+.text-faded {
+  /* color: rgba(245,245,245,0.7); */
+  color: #333; }
+
+.text-dark {
+  color: #111; }
+
+.text-primary {
+  color: #a8da43; }
+
+.modal-content {
+  background-color: #1d1d1d; }
+
+.margin-top-0 {
+  margin-top: 0; }
+
+.margin-top-md {
+  margin-top: 30px; }
+
+.margin-top-lg {
+  margin-top: 60px; }
+
+.no-gutter > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.fullHeight, .almostHeight {
+  padding: 50px 0; }
+
+section:nth-child(odd) {
+  background-color: #f5f5f5; }
+
+.fullHeight {
+  min-height: 100vh; }
+
+.almostHeight {
+  min-height: 50vh; }
+
+div.row > div {
+  margin-top: 25px; }
+
+.text-fluid {
+  font-family: "Droid Serif", "Lora", "Roboto Slab", "Merriweather", "Times New Roman", sans-serif;
+  text-align: left;
+  margin: 20px auto;
+  line-height: 1.75;
+  width: 90%;
+  max-width: 620px;
+  color: #333; }
+
+.box {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  margin-right: 80px; }
+
+.large-shadow {
+  box-shadow: 3px 7px 16px -6px rgba(0, 0, 0, 0.07), 15px 20px 37px -2px rgba(0, 0, 0, 0.07), 20px 42px 80px 6px rgba(0, 0, 0, 0.07), 20px 42px 120px 10px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+#typoNcolor .box:first-child {
+  background-color: #a8da43; }
+
+#typoNcolor .box:nth-of-type(2) {
+  background-color: #43b39a; }
+
+#typoNcolor .box:last-child {
+  background-color: #080854; }
+
+.stuck {
+  position: fixed;
+  top: 0;
+  z-index: 500; }
+
+/* *****************
+* NAVIGATION
+****************** */
+nav ul {
+  margin-left: 0;
+  padding: 0;
+  list-style: none; }
+
+nav li {
+  display: inline-block; }
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
+
+/* *****************
+* FORMS
+****************** */
+form:focus-within {
+  box-shadow: 0 0 4px 6px rgba(80, 88, 156, 0.2); }
+
+label {
+  display: block;
+  margin: 18px 0 12px;
+  text-transform: uppercase;
+  color: #43b39a;
+  font-family: "Ubuntu", "Quicksand", "Segoe UI", "Helvetica Neue", "Open Sans", "Noto Sans", "Droid Sans Serif", "Roboto", Arial, sans-serif;
+  font-size: 16px; }
+
+input {
+  display: inline-block;
+  width: 80%;
+  height: 35px;
+  padding: 6px 12px;
+  margin: 0 0 30px;
+  font-family: "Droid Serif", "Lora", "Roboto Slab", "Merriweather", "Times New Roman", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #454545;
+  background-color: initial;
+  background-image: none;
+  border: 0;
+  border-bottom-width: 0px;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  border-radius: 0;
+  border-bottom: 1px solid #666;
+  transition: border-color ease-in-out .15s, width ease-in-out .15s; }
+  input:focus {
+    color: #333;
+    background-color: inherit;
+    border-bottom: 2px solid #43b39a;
+    width: 100%;
+    outline: none;
+    transition: border-color ease-in-out .3s, width ease-in-out .3s; }
+
+textarea {
+  padding: 10px;
+  width: 100%;
+  color: #454545;
+  font-family: "Droid Serif", "Lora", "Roboto Slab", "Merriweather", "Times New Roman", sans-serif; }
+  textarea:focus {
+    border: 2px solid #43b39a;
+    outline: none; }
+
+/****************************
+*      LINKS & BUTTONS
+*****************************/
+button {
+  background-color: #c2C2C2;
+  color: #1A1A1A;
+  border: 0;
+  font-size: 16px;
+  padding: 12px 32px;
+  font-family: "Ubuntu", "Quicksand", "Segoe UI", "Helvetica Neue", "Open Sans", "Noto Sans", "Droid Sans Serif", "Roboto", Arial, sans-serif;
+  outline: none;
+  margin: 5px 20px; }
+  button:hover {
+    color: #dddddd;
+    background-color: #252525; }
+
+div button:first-child {
+  margin-left: 0; }
+
+div button:last-child {
+  margin-right: 0; }
+
+a.hyperlink {
+  color: #0078d7; }
+
+/****************************
+*        SECTIONS
+*****************************/
+section#values #circle svg {
+  display: block;
+  min-height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  max-width: 100%; }
+
+section#values #circle::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: none; }
+
+/****************************
+*        ANIMATIONS
+*****************************/
+@keyframes zoomin {
+  from {
+    transform: scale(1.3, 1.3); }
+  to {
+    transform: scale(1, 1); } }
+
+#zoom-photo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 3%, transparent 18%), url("../assets/background-zoom.jpg");
+  background-position: 0 0, cover;
+  -webkit-background-size: 100% 100%, cover;
+  background-size: 100% 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: static, static;
+  background-position: 50% 50%;
+  z-index: 100;
+  animation-name: zoomin;
+  animation-duration: 5.5s;
+  animation-timing-function: easeInQuad;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+  /* Safari 4.0 - 8.0 */
+  animation-fill-mode: both; }
+
+@keyframes blink {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.blinkDot {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: easeOutCubic;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/* *****************
+* MODERNIZR
+****************** */
+/*
+////////////////////////////////////////////////////////
+MEDIA QUERIES
+/////////////////////////////////////////////////////
+*/
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680)); } }
+
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  section#values #circle::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  section#values #circle svg {
+    min-height: 600px; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 20px; } }
+
+@media print {
+  .header {
+    position: static; }
+  nav {
+    display: none; }
+  a[href^="http"]:not([href*="mywebsite.com"])::after {
+    content: " (" attr(href) ")"; } }
+
+/*
+////////////////////////////////////////////////////////
+SPECIAL IE
+/////////////////////////////////////////////////////
+*/
