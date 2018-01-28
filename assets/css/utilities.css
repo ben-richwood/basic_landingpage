@@ -1,0 +1,279 @@
+@charset "UTF-8";
+body {
+  /* Times New Roman-based stack */
+  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  /* Modern Georgia-based serif stack */
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  /* Traditional Garamond-based serif stack */
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  /* Helvetica/Arial-based sans serif stack */
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Verdana-based sans serif stack */
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  /* Trebuchet-based sans serif stack */
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  /* Impact-based sans serif stack */
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  /* Monospace stack */
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+html {
+  font-size: 16px; }
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 8 * ((100vw - 320px) / 880)); } }
+  @media screen and (min-width: 1200px) {
+    html {
+      font-size: 24px; } }
+
+/*Language-specific*/
+:lang(af) {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(ak) {
+  font-family: Lucida,"DejaVu Sans",inherit; }
+
+:lang(ar) {
+  font-family: Tahoma 12,Nazli,KacstOne,"DejaVu Sans",inherit; }
+
+:lang(bg) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(bn) {
+  font-family: FreeSans,MuktiNarrow,Vrinda,inherit;
+  font-size: 1.1em;
+  line-height: 1.4em; }
+
+:lang(cs) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(da) {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(de) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(el) {
+  font-family: "DejaVu Sans",inherit;
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(en-GB) {
+  quotes: '\2018' '\2019' '\201C' '\201D'; }
+
+:lang(es) {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(fa) {
+  font-family: Terafik,Traffic,Roya,Nazli,Nazanin,sans;
+  font-size: 1.5em; }
+
+:lang(fi) {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(fr) {
+  quotes: '\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'; }
+
+:lang(hr) {
+  quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+
+:lang(is) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(ja) {
+  font-size: 1.1em; }
+
+:lang(km) {
+  font-family: "Khmer OS System","Khmer OS","Khmer Kampongtrach","CDT Khmer",inherit;
+  line-height: 2em; }
+
+:lang(ko) {
+  font-size: 1.1em; }
+
+:lang(lt) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(nl) {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(pl) {
+  quotes: '\201E' '\201D' '\201A' '\2019'; }
+
+:lang(ro) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sk) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sq) {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(sr) {
+  quotes: '\201E' '\201C' '\201A' '\2018'; }
+
+:lang(sv) {
+  quotes: '\201D' '\201D' '\2019' '\2019'; }
+
+:lang(tr) {
+  quotes: '\00AB' '\00BB' '\2039' '\203A'; }
+
+:lang(vi) {
+  font-family: "Lucida Grande","Vu Phu Tho","DejaVu Sans",inherit; }
+
+:lang(vi) a:hover, :lang(vi) a:active {
+  text-decoration: none;
+  color: #606047; }
+
+:lang(zh) {
+  font-size: 1.5em; }
+
+a[href^="mailto:"]:before {
+  content: "\2709"; }
+
+.phone:before {
+  content: "\2706"; }
+
+.important:before {
+  content: "\27BD"; }
+
+blockquote:before {
+  content: "\275D"; }
+
+blockquote:after {
+  content: "\275E"; }
+
+.alert:before {
+  content: "\26A0"; }
+
+/* Empty Elements */
+div:empty, span:empty, li:empty, p:empty, td:empty, th:empty {
+  padding: 20px;
+  border: 5px dotted yellow !important; }
+
+/* Empty Attributes */
+*[alt=""], *[title=""], *[class=""], *[id=""], a[href=""], a[href="#"] {
+  border: 5px solid yellow !important; }
+
+/* Deprecated Elements */
+applet, basefont, center, dir, font, isindex, menu, s, strike, u {
+  border: 5px dotted red !important; }
+
+/* Deprecated Attributes */
+*[background], *[bgcolor], *[clear], *[color], *[compact], *[noshade], *[nowrap], *[size], *[start],
+*[bottommargin], *[leftmargin], *[rightmargin], *[topmargin], *[marginheight], *[marginwidth], *[alink], *[link], *[text], *[vlink],
+*[align], *[valign],
+*[hspace], *[vspace],
+*[height], *[width],
+ul[type], ol[type], li[type] {
+  border: 5px solid red !important; }
+
+/* Proposed Deprecated Elements */
+input[type="button"], big, tt {
+  border: 5px dotted #33FF00 !important; }
+
+/* Proposed Deprecated Attributes */
+*[border], a[target], table[cellpadding], table[cellspacing], *[name] {
+  border: 5px solid #33FF00 !important; }
+
+*[style], font, center {
+  outline: 5px solid red; }
+
+*[class=""], *[id=""] {
+  outline: 5px dotted red; }
+
+img[alt=""] {
+  border: 3px dotted red; }
+
+img:not([alt]) {
+  border: 5px solid red; }
+
+img[title=""] {
+  outline: 3px dotted fuchsia; }
+
+img:not([title]) {
+  outline: 5px solid fuchsia; }
+
+table:not([summary]) {
+  outline: 5px solid red; }
+
+table[summary=""] {
+  outline: 3px dotted red; }
+
+th {
+  border: 2px solid red; }
+
+th[scope="col"], th[scope="row"] {
+  border: none; }
+
+a[href]:not([title]) {
+  border: 5px solid red; }
+
+a[title=""] {
+  outline: 3px dotted red; }
+
+a[href="#"] {
+  background: lime; }
+
+a[href=""] {
+  background: fuchsia; }
+
+/* Portrait */
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+/* Landscape */
+/* ----------- Non-Retina Screens ----------- */
+/* ----------- Retina Screens ----------- */
+/* ----------- Apple Watch ----------- */
+@media print {
+  a:after {
+    content: " (" attr(href) ") ";
+    font-size: 0.8em;
+    font-weight: normal; } }
+
+/* Add " (PDF)" text after links that go to PDFs */
+a[href$=".pdf"]:after {
+  content: " (PDF)"; }
+
+/* If file size specified as data attribute, use that too */
+a[href$=".pdf"][data-size]:after {
+  content: " (PDF, " attr(data-size) ")"; }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+blockquote p {
+  display: inline; }
+
+a[href^="http://"] {
+  /* fully valid URL, likely external link */ }
+
+a[href="http://google.com"] {
+  /* link to specific website */ }
+
+a[href^="/"], a[href^=".."] {
+  /* internal relative link */ }
+
+a[href^="mailto:"] {
+  /* email link */ }
+
+a[href$=".pdf"] {
+  /* PDF file */ }
+
+a[href$=".zip"] {
+  /* Archive file */ }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }

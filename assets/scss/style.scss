@@ -40,6 +40,8 @@ $colorInput: #454545;
 $font-monospace: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
 
 
+
+
 /*
 	MIXINS
  */
@@ -595,9 +597,39 @@ section#values #circle::after {
     to {transform: rotate(360deg);}
 }
 
-/* *****************
-* MODERNIZR
-****************** */
+/*
+   ////////////////////////////////////////////////////////
+  // Handling Long Words and URLs
+ // (Forcing Breaks, Hyphenation, Ellipsis, etc)
+/////////////////////////////////////////////////////
+*/
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+
+/*
+  ////////////////////////////////////////////////////////
+ // MODERNIZR
+/////////////////////////////////////////////////////
+*/
 
 .no-backgroundblendmode{}
 .no-backgroundsize{}
@@ -616,11 +648,19 @@ section#values #circle::after {
 .no-video{}
 
 /*
-////////////////////////////////////////////////////////
-MEDIA QUERIES
+  ////////////////////////////////////////////////////////
+ // MEDIA QUERIES
 /////////////////////////////////////////////////////
 */
 /*==========  Mobile First Method  ==========*/
+
+// media:
+// all:	Used for all media type devices
+// handheld: Used for small or handheld devices
+// print: Used for printers
+// projection: Used for projected presentations, like slides
+// screen: Used for computer screens
+// tv:	Used for television-type devices
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
@@ -683,8 +723,8 @@ MEDIA QUERIES
 	}
 }
 /*
-////////////////////////////////////////////////////////
-SPECIAL IE
+  ////////////////////////////////////////////////////////
+ // SPECIAL IE
 /////////////////////////////////////////////////////
 */
 body.ie{}
